@@ -17,7 +17,7 @@ class Test_test_1(unittest.TestCase):
     def test_ultimate(self):
 
         array = ['a', 'ab', 'abc', 13.2, False, 'yarn', 0, 33]
-        if not Task_2.SecondSolution(array): self.fail(msg = "Решение не представлено")
+        if type(Task_2.SecondSolution(array)) == bool: self.fail(msg = "Решение не представлено")
         result = [0, False, 'abc','a']
 
         self.assertListEqual(Task_2.SecondSolution(array), result, "Test ULTIMATE not passed")
